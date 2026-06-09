@@ -1,5 +1,5 @@
 <header class="banner bg-white border-b">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center">
         <a class="brand text-lg font-semibold text-gray-900" href="{{ home_url('/') }}">
