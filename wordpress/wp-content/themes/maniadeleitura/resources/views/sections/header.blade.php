@@ -3,7 +3,15 @@
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center">
         <a class="brand text-lg font-semibold text-gray-900" href="{{ home_url('/') }}">
+          @php
+          $logo = Vite::asset('resources/images/mania-de-leitura.webp');
+          @endphp
+
+          @if ($logo)
+          <img src="{{ $logo }}" alt="{{ $siteName }}" width="150px">
+          @else
           {!! $siteName !!}
+          @endif
         </a>
       </div>
 
