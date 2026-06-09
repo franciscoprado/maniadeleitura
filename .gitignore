@@ -1,0 +1,20 @@
+# Ignore the entire WordPress installation under /wordpress
+/wordpress/*
+
+# But keep the wp-content directory so we can selectively allow the theme
+!/wordpress/wp-content/
+
+# Ignore everything inside wp-content (plugins, uploads, etc.) by default
+/wordpress/wp-content/*
+
+# Allow the themes directory and the specific theme we want to track
+!/wordpress/wp-content/themes/
+!/wordpress/wp-content/themes/maniadeleitura/
+!/wordpress/wp-content/themes/maniadeleitura/**
+
+# Optional: if your theme has build artifacts you don't want tracked, add them here
+# Example:
+# /wordpress/wp-content/themes/maniadeleitura/node_modules/
+# /wordpress/wp-content/themes/maniadeleitura/dist/
+
+.env
