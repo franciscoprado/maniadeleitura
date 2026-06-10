@@ -2,3 +2,21 @@
 @source "../../app/**/*.php";
 @source "../**/*.blade.php";
 @source "../**/*.js";
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+.woocommerce {
+  ul.products {
+    li.product {
+      .button {
+        @apply rounded bg-blue-950 text-white w-full text-center hover:bg-sky-800;
+      }
+    }
+  }
+}

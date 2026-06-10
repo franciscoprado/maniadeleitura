@@ -1,5 +1,5 @@
-<footer class="content-info">
-  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+<footer class="content-info bg-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     @php(dynamic_sidebar('sidebar-footer'))
   </div>
 </footer>
