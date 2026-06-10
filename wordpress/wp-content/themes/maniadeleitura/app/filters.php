@@ -127,7 +127,8 @@ function maniadeleitura_shop_loop_item_title()
     }
 
     printf(
-        '<h2 class="maniadeleitura-loop-product__title">%s</h2>',
+        '<h2 class="maniadeleitura-loop-product__title" title="%s">%s</h2>',
+        esc_attr(get_the_title()),
         esc_html(get_the_title()),
     );
 }

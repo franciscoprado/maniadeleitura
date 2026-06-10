@@ -31,7 +31,14 @@
     },
     "typography": {
       "defaultFontSizes": false,
-      "customFontSize": false
+      "customFontSize": false,
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Roboto\", sans-serif",
+          "name": "Roboto",
+          "slug": "roboto"
+        }
+      ]
     }
   }
 }
