@@ -1,4 +1,4 @@
-<header class="banner bg-white border-b py-2">
+<header class="banner bg-white border-b border-gray-300 md:py-2 md:fixed w-full z-10 shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center">
