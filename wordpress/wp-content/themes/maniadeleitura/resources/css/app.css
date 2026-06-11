@@ -28,7 +28,7 @@ h2 {
       text-align: center;
 
       h2 {
-        @apply text-lg font-medium mb-2 text-left;
+        @apply text-base font-medium text-left;
         font-size: 1rem;
         overflow: hidden;
         white-space: nowrap;
@@ -36,11 +36,11 @@ h2 {
       }
 
       .price {
-        @apply text-gray-700 font-bold mb-0 text-lg text-right;
+        @apply text-gray-700 font-bold mb-0 text-2xl text-right;
       }
 
       .button {
-        @apply rounded text-white w-full text-center bg-indigo-600 hover:bg-indigo-700;
+        @apply rounded text-white w-full text-base text-center py-2 bg-indigo-600 hover:bg-indigo-700;
       }
 
       .added_to_cart {
@@ -54,21 +54,27 @@ h2 {
   form {
     display: flex;
     flex-direction: column;
-    width: 40vh;
   }
 }
 
+.woocommerce div.product form.cart {
+  margin-bottom: 0;
+}
+
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link,
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
   button.button.alt {
-  @apply rounded text-white text-center bg-indigo-600 hover:bg-indigo-700;
+  @apply rounded text-white font-bold w-full text-base py-2 text-center bg-indigo-600 hover:bg-indigo-700;
 }
 
 .woocommerce #content div.product div.summary,
 .woocommerce div.product div.summary,
 .woocommerce-page #content div.product div.summary,
 .woocommerce-page div.product div.summary {
+  @apply flex flex-col gap-4;
+
   h1 {
-    @apply border-b border-gray-200 mb-6 pb-6;
+    @apply border-b border-gray-200;
   }
 
   .price {
@@ -78,4 +84,12 @@ h2 {
   .maniadeleitura-product__meta {
     @apply flex flex-col;
   }
+
+  .sku_wrapper {
+    @apply text-xs;
+  }
+}
+
+.wc-forward {
+  @apply rounded;
 }

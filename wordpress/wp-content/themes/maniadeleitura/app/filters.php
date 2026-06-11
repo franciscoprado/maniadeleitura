@@ -324,11 +324,11 @@ function maniadeleitura_template_single_meta()
 
     // SKU
     if (wc_product_sku_enabled() && $product->get_sku()) {
-        // printf(
-        //     '<span class="sku_wrapper">%s <span class="sku">%s</span></span>',
-        //     __('SKU:', 'woocommerce'),
-        //     esc_html($product->get_sku()),
-        // );
+        printf(
+            '<p class="sku_wrapper">%s <span class="sku">%s</span></p>',
+            __('SKU:', 'woocommerce'),
+            esc_html($product->get_sku()),
+        );
     }
 
     // Categories
