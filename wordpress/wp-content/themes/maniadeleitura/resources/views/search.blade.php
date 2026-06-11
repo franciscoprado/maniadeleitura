@@ -1,19 +1,45 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header')
+    @php
+        do_action('get_header', 'search');
+    @endphp
 
-  @if (! have_posts())
-    <x-alert type="warning">
-      {!! __('Sorry, no results were found.', 'sage') !!}
-    </x-alert>
+    <header class="woocommerce-products-header">
+        <h1 class="woocommerce-products-header__title page-title">
+            {{ sprintf(__('Search results for: %s', 'sage'), get_search_query()) }}
+        </h1>
+    </header>
 
-    {!! get_search_form(false) !!}
-  @endif
+    <div class="woocommerce">
 
-  @while(have_posts()) @php(the_post())
-    @include('partials.content-search')
-  @endwhile
+        @if (have_posts())
+            @php
+                woocommerce_product_loop_start();
+            @endphp
 
-  {!! get_the_posts_navigation() !!}
+            @while (have_posts())
+                @php
+                    the_post();
+                @endphp
+
+                @include('woocommerce.content-product')
+            @endwhile
+
+            @php
+                woocommerce_product_loop_end();
+            @endphp
+        @else
+            <x-alert type="warning">
+                {!! __('Sorry, no results were found.', 'sage') !!}
+            </x-alert>
+
+            {!! get_search_form(false) !!}
+        @endif
+    </div>
+
+    @php
+        do_action('get_sidebar', 'search');
+        do_action('get_footer', 'search');
+    @endphp
 @endsection
