@@ -1,4 +1,4 @@
-<footer class="content-info bg-indigo-700 text-white py-12">
+<footer class="content-info bg-gray-100 text-black py-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     @php(dynamic_sidebar('sidebar-footer'))
   </div>

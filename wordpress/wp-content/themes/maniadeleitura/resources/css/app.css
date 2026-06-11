@@ -16,13 +16,19 @@ h2 {
   font-size: 1.25rem;
 }
 
+.wc-block-components-button:not(.is-link),
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit,
+.woocommerce .woocommerce-form-register .woocommerce-form-register__submit {
+  @apply rounded text-white w-full text-center font-bold text-base bg-indigo-600 hover:bg-indigo-700 hover:text-white;
+}
+
 .woocommerce {
   ul.products {
     li.product {
       text-align: center;
 
       h2 {
-        @apply text-lg font-medium mb-2;
+        @apply text-lg font-medium mb-2 text-left;
         font-size: 1rem;
         overflow: hidden;
         white-space: nowrap;
@@ -30,16 +36,46 @@ h2 {
       }
 
       .price {
-        @apply text-gray-700 font-bold mb-0;
+        @apply text-gray-700 font-bold mb-0 text-lg text-right;
       }
 
       .button {
-        @apply rounded-full text-white w-full text-center bg-indigo-600 hover:not-focus:bg-indigo-700;
+        @apply rounded text-white w-full text-center bg-indigo-600 hover:bg-indigo-700;
       }
 
       .added_to_cart {
         @apply text-sm text-gray-500;
       }
     }
+  }
+}
+
+.maniadeleitura-product__add-to-cart {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 40vh;
+  }
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles))
+  button.button.alt {
+  @apply rounded text-white text-center bg-indigo-600 hover:bg-indigo-700;
+}
+
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary {
+  h1 {
+    @apply border-b border-gray-200 mb-6 pb-6;
+  }
+
+  .price {
+    @apply font-bold text-3xl text-black;
+  }
+
+  .maniadeleitura-product__meta {
+    @apply flex flex-col;
   }
 }
