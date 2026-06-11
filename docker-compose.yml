@@ -20,7 +20,8 @@ services:
       - wp-network
 
   php:
-    image: wordpress:php8.5-fpm
+    build:
+      context: ./php
     restart: unless-stopped
     depends_on:
       - db

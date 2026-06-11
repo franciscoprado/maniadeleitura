@@ -17,6 +17,20 @@
             "request": "launch",
             "command": "npm run dev",
             "cwd": "${workspaceFolder}/wordpress/wp-content/themes/maniadeleitura"
+        },
+        {
+            "name": "Listen for Xdebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9003,
+            "pathMappings": {
+                "/var/www/html": "${workspaceFolder}/wordpress"
+            },
+            "xdebugSettings": {
+                "max_children": 128,
+                "max_data": 512,
+                "max_depth": 3
+            }
         }
     ]
 }
