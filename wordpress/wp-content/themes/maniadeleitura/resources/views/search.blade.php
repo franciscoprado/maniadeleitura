@@ -7,7 +7,7 @@
 
     <header class="woocommerce-products-header">
         <h1 class="woocommerce-products-header__title page-title">
-            {{ sprintf(__('Search results for: %s', 'sage'), get_search_query()) }}
+            {{ sprintf(__('Search results for: %s', 'woocommerce'), get_search_query()) }}
         </h1>
     </header>
 
@@ -31,10 +31,8 @@
             @endphp
         @else
             <x-alert type="warning">
-                {!! __('Sorry, no results were found.', 'sage') !!}
+                {!! __('No products found', 'woocommerce') !!}
             </x-alert>
-
-            {!! get_search_form(false) !!}
         @endif
     </div>
 

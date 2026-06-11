@@ -8,7 +8,9 @@
           @endphp
 
           @if ($logo)
-          <img src="{{ $logo }}" alt="{{ $siteName }}" width="150px">
+          <div class="max-w-[120px] xs:max-w-[30%]">
+            <img src="{{ $logo }}" alt="{{ $siteName }}" class="w-full">
+          </div>
           @else
           {!! $siteName !!}
           @endif
@@ -19,7 +21,7 @@
         <div class="flex items-center">
           <!-- Search form (visible on md and up) -->
           <form class="search-form hidden md:flex items-center md:mr-6" role="search" method="get" action="{{ home_url('/') }}">
-            <input class="h-10 px-3 bg-gray-100 text-gray-900 placeholder:text-gray-500 border border-gray-300 focus:ring-indigo-500 focus:outline-none rounded-l" type="text" placeholder="{{ __('Search', 'woocommerce') }}" value="{{ get_search_query() }}" name="s" />
+            <input class="w-50 h-10 px-3 bg-gray-100 text-gray-900 placeholder:text-gray-500 border border-gray-300 focus:ring-indigo-500 focus:outline-none rounded-l" type="text" placeholder="{{ __('Search', 'woocommerce') }}" value="{{ get_search_query() }}" name="s" />
             <button type="submit" class="h-10 bg-gray-100 border border-l-0 border-gray-300 px-3 rounded-r hover:bg-gray-200 text-gray-500 cursor-pointer" aria-label="{{ __('Search', 'woocommerce') }}">
               <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
