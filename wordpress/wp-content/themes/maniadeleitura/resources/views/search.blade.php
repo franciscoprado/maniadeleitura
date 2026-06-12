@@ -29,6 +29,8 @@
             @php
                 woocommerce_product_loop_end();
             @endphp
+
+            @include('partials.pagination')
         @else
             <x-alert type="warning">
                 {!! __('No products found', 'woocommerce') !!}
