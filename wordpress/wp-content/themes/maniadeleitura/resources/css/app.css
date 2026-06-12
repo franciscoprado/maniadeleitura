@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;700&display=swap');
-@import 'tailwindcss' theme(static);
+@import 'tailwindcss';
 @source "../../app/**/*.php";
 @source "../**/*.blade.php";
 @source "../**/*.js";
