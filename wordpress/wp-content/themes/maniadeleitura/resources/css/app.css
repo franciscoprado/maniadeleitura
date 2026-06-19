@@ -116,3 +116,32 @@ h2 {
     top: 142px;
   }
 }
+
+.wc-block-components-address-form__country {
+  margin-top: 12px !important;
+}
+
+footer {
+  .wp-block-woocommerce-product-categories {
+    .wc-block-product-categories-list,
+    .wc-block-product-categories-list-item {
+      @apply inline-flex flex-wrap justify-center items-center gap-y-1 gap-x-1;
+    }
+
+    .wc-block-product-categories-list {
+      @apply inline-flex flex-wrap gap-x-4 px-2 py-1;
+    }
+
+    .wc-block-product-categories-list--depth-0 {
+      @apply text-base;
+    }
+
+    .wc-block-product-categories-list--depth-1 {
+      @apply text-sm;
+    }
+
+    .wc-block-product-categories-list--depth-2 {
+      @apply text-xs;
+    }
+  }
+}
