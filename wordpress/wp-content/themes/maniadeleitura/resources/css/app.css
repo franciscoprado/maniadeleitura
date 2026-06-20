@@ -121,6 +121,10 @@ h2 {
   margin-top: 12px !important;
 }
 
+.woocommerce span.onsale {
+  @apply bg-red-600;
+}
+
 footer {
   .wp-block-woocommerce-product-categories {
     .wc-block-product-categories-list,
