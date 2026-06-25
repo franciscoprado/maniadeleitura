@@ -129,6 +129,10 @@ h2 {
 
 footer {
   .wp-block-woocommerce-product-categories {
+    @apply mb-0;
+  }
+
+  .wp-block-woocommerce-product-categories {
     .wc-block-product-categories-list,
     .wc-block-product-categories-list-item {
       @apply inline-flex flex-wrap justify-center items-center gap-y-1 gap-x-1;
@@ -150,4 +154,8 @@ footer {
       @apply text-xs;
     }
   }
+}
+
+.woocommerce-account .addresses .title .edit {
+  @apply float-left text-sm underline;
 }
